@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CORE Portal - Storefront Sandbox</title>
+    <style>
+        @import url('https://googleapis.com');
+        * { box-sizing: border-box; font-family: 'Google Sans', 'Product Sans', 'Outfit', sans-serif; margin: 0; padding: 0; }
+        body { background: linear-gradient(180deg, #f8f9fa 0%, #e8eaed 100%); color: #202124; min-height: 100vh; padding: 40px; display: flex; flex-direction: column; }
+        .header-title { font-size: 28px; font-weight: 500; color: #1a73e8; margin-bottom: 30px; }
+        .storefront-split-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 35px; max-width: 1000px; width: 100%; margin: 0 auto; align-items: start; }
+        .left-menu-pane { background-color: #ffffff; border: 1px solid #dadce0; border-radius: 16px; padding: 35px; box-shadow: 0 4px 12px rgba(0,0,0,0.03); }
+        .store-identity { font-size: 24px; font-weight: 500; margin-bottom: 20px; color: #202124; display: flex; justify-content: space-between; align-items: center; }
+        .order-form-group { margin-bottom: 20px; display: flex; flex-direction: column; gap: 8px; }
+        .order-form-group label { font-size: 14px; font-weight: 500; color: #5f6368; }
+        .store-text-input { width: 100%; padding: 12px 16px; font-size: 15px; border-radius: 8px; border: 1px solid #dadce0; outline: none; background-color: #f8f9fa; }
+        .store-text-input:focus { border-color: #1a73e8; background-color: #ffffff; }
+        .order-now-submit-btn { width: 100%; background-color: #1a73e8; color: #ffffff; border: none; padding: 14px; font-size: 16px; font-weight: 500; border-radius: 24px; cursor: pointer; margin-top: 10px; box-shadow: 0 2px 5px rgba(26,115,232,0.2); }
+        .order-now-submit-btn:hover { background-color: #1557b0; }
+        .right-rules-pane { background-color: #000000; color: #ffffff; border-radius: 16px; padding: 35px; box-shadow: 0 6px 18px rgba(0,0,0,0.15); }
+        .rules-pane-title { font-size: 22px; font-weight: 500; margin-bottom: 20px; border-bottom: 1px solid #2d3035; padding-bottom: 10px; color: #ffffff; }
+        .rules-list { list-style-type: none; display: flex; flex-direction: column; gap: 15px; }
+        .rules-list li { font-size: 15px; line-height: 1.5; color: #cccccc; }
+        .rules-list strong { color: #ffffff; display: block; margin-bottom: 2px; }
+        .footer-notice { font-size: 14px; color: #5f6368; margin-top: auto; padding-top: 40px; text-align: left; }
+    </style>
+</head>
+<body>
+
+    <div class="header-title">CORE Portal // Storefronts</div>
+
+    <div class="storefront-split-grid">
+        
+        <!-- LEFT PANELS: ORDER INTAKE PLATFORM -->
+        <div class="left-menu-pane">
+            
+                <span>Snack House 🍿</span>
+                <span style="font-size:14px; color:#5f6368; font-weight:400;">Owner: Ethan R</span>
+            </div>
+            
+            <!-- 📨 FORMSPREE EMAIL ROUTER ENGINE 
+                 Replace 'kingethan885@gmail.com' with your actual personal email address! -->
+            <form action="https://formspree.io/f/mwllzayo" method="POST">
+                
+                <div class="order-form-group">
+                    <label>First & Last Name (Include Grade)</label>
+                    <input type="text" name="Client Name" class="store-text-input" placeholder="e.g., John Doe - 10th Grade" required>
+                </div>
+
+                <div class="order-form-group">
+                    <label>Menu Items Selection (Write items here)</label>
+                    <input type="text" name="Ordered Items" class="store-text-input" placeholder="List the specific candy or treats you want..." required>
+                </div>
+
+                <div class="order-form-group">
+                    <label>Delivery Target Period & Teacher Location</label>
+                    <input type="text" name="Delivery Location" class="store-text-input" placeholder="e.g., Period 3 - Room 204 (Mr. Smith)" required>
+                </div>
+
+                <button type="submit" class="order-now-submit-btn">Order Now ➔</button>
+                
+            </form>
+        </div>
+
+        <!-- RIGHT PANELS: FIXED TERMS & BULLETIN BOARD -->
+        <div class="right-rules-pane">
+            <div class="rules-pane-title">Ecosystem Operating Rules</div>
+            <ul class="rules-list">
+                <li>
+                    <strong>Delivery Restrictions</strong>
+                    We do not process distributions or deliver during standard Lunch A blocks. Ensure your schedules coordinate accurately.
+                </li>
+                <li>
+                    <strong>Stock Rotations</strong>
+                    Items are added or discontinued fluidly based on raw local supply limits. Popular demands will cycle back into inventory.
+                </li>
+                <li>
+                    <strong>Standard Pricing Base</strong>
+                    Individual generic candy pieces run at $3 a piece. Full promotional bundle packages sit at a fixed rate of $5 a pack.
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="footer-notice">CORE Brand System Network Platform</div>
+
+</body>
+</html>
